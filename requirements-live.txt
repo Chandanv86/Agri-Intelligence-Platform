@@ -1,0 +1,21 @@
+# Live-connector dependencies (see docs/KNOWN_LIMITATIONS.md).
+#
+# Install these ONLY in environments that actually have live credentials and
+# want the satellite path to really fire. The base image and test suite
+# deliberately omit them so DEMO mode stays dependency-light and import-safe.
+#
+#   pip install -r requirements-live.txt
+#
+# What each connector needs to fire:
+#   - SentinelHub NDVI (Sentinel-2): works on the BASE install already
+#     (uses httpx). Just needs SENTINELHUB_CLIENT_ID / SENTINELHUB_CLIENT_SECRET.
+#   - Google Earth Engine (Dynamic World, Sentinel-1, ERA5-Land, CHIRPS,
+#     WorldCereal): needs the earthengine-api package below, plus GEE_PROJECT
+#     and GEE_SERVICE_ACCOUNT_JSON_PATH in .env.
+#
+# Without earthengine-api installed, the GEE connectors degrade gracefully
+# (logged warning, fired=false) -- they do NOT crash the snapshot build.
+
+-r requirements.txt
+
+earthengine-api>=1.1.0

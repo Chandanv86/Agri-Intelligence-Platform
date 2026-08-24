@@ -1,0 +1,116 @@
+# Full target-architecture stack from docs/PRODUCTION_IMPLEMENTATION_PLAN.md §1.
+#
+# Runs entirely in DEMO mode with zero live credentials -- .env.example's
+# DEFAULT_DATA_STATUS=DEMO rule still applies. redis and db exist so the
+# async task queue (§2) and Tier 1/2 datastore (§7) scaffolding actually has
+# something to talk to; the app does not yet require either to serve the
+# existing synchronous DEMO endpoints.
+#
+# Quick start:
+#   docker compose up --build          # everything
+#   docker compose up --build api      # just the existing DEMO API, as before
+#   open http://localhost:8000         # app
+#   open http://localhost:5555         # flower (celery task inspector)
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/1
+      DATABASE_URL: postgresql+psycopg://agri:agri@db:5432/agri_intel
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      redis:
+        condition: service_healthy
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  worker:
+    build: .
+    command: celery -A app.workers.celery_app.celery_app worker
+      --loglevel=info --concurrency=4 -Q snapshot,baseline
+    env_file:
+      - .env
+    environment:
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/1
+      DATABASE_URL: postgresql+psycopg://agri:agri@db:5432/agri_intel
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      redis:
+        condition: service_healthy
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  beat:
+    build: .
+    command: celery -A app.workers.celery_app.celery_app beat --loglevel=info
+    env_file:
+      - .env
+    environment:
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/1
+      DATABASE_URL: postgresql+psycopg://agri:agri@db:5432/agri_intel
+    depends_on:
+      redis:
+        condition: service_healthy
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  flower:
+    build: .
+    command: celery -A app.workers.celery_app.celery_app flower --port=5555
+    ports:
+      - "5555:5555"
+    environment:
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/1
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  db:
+    image: postgis/postgis:16-3.4-alpine
+    environment:
+      POSTGRES_USER: agri
+      POSTGRES_PASSWORD: agri
+      POSTGRES_DB: agri_intel
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./migrations/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agri -d agri_intel"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+  pg_data:

@@ -1,0 +1,8 @@
+[project]
+name = "agri-intelligence-platform"
+version = "0.2.0"
+description = "Hierarchy-aware, near-real-time agricultural intelligence platform: Sowing Progress + Yield Gap themes across India, Kenya, Uganda, Tanzania, Ethiopia, South Africa."
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

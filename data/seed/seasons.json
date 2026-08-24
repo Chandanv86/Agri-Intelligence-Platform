@@ -1,0 +1,126 @@
+{
+  "_schema_note": "One crop can have MULTIPLE concurrent/overlapping season windows per country (see Card_Architecture_Final_Review_and_Gaps.md \u00a72.8). region_scope=[] means the window applies nationally; otherwise it lists the admin1 ids it applies to.",
+  "seasons": [
+    {
+      "season_id": "IND-2026-kharif-rice",
+      "country_id": "IND",
+      "crop_id": "rice",
+      "name": "Kharif 2026",
+      "region_scope": [],
+      "start_date": "2026-06-01",
+      "end_date": "2026-11-30",
+      "sowing_start": "2026-06-01",
+      "sowing_end": "2026-07-31"
+    },
+    {
+      "season_id": "IND-2026-rabi-wheat",
+      "country_id": "IND",
+      "crop_id": "wheat",
+      "name": "Rabi 2026",
+      "region_scope": [],
+      "start_date": "2026-10-15",
+      "end_date": "2027-04-30",
+      "sowing_start": "2026-10-15",
+      "sowing_end": "2026-12-31"
+    },
+    {
+      "season_id": "KEN-2026-long-rains-rice",
+      "country_id": "KEN",
+      "crop_id": "rice",
+      "name": "Long Rains 2026",
+      "region_scope": [],
+      "start_date": "2026-03-01",
+      "end_date": "2026-10-31",
+      "sowing_start": "2026-03-01",
+      "sowing_end": "2026-05-31"
+    },
+    {
+      "season_id": "KEN-2026-short-rains-maize",
+      "country_id": "KEN",
+      "crop_id": "maize",
+      "name": "Short Rains 2026",
+      "region_scope": [],
+      "start_date": "2026-10-01",
+      "end_date": "2027-02-28",
+      "sowing_start": "2026-10-01",
+      "sowing_end": "2026-11-30"
+    },
+    {
+      "season_id": "UGA-2026-first-season-maize",
+      "country_id": "UGA",
+      "crop_id": "maize",
+      "name": "2026 First Season (Mar-May rains)",
+      "region_scope": [],
+      "start_date": "2026-02-01",
+      "end_date": "2026-08-31",
+      "sowing_start": "2026-02-01",
+      "sowing_end": "2026-04-30"
+    },
+    {
+      "season_id": "UGA-2026-second-season-maize",
+      "country_id": "UGA",
+      "crop_id": "maize",
+      "name": "2026 Second Season (Sep-Nov rains)",
+      "region_scope": [],
+      "start_date": "2026-08-01",
+      "end_date": "2027-01-31",
+      "sowing_start": "2026-08-01",
+      "sowing_end": "2026-10-31"
+    },
+    {
+      "season_id": "TZA-2026-masika-maize",
+      "country_id": "TZA",
+      "crop_id": "maize",
+      "name": "Masika 2026 (long rains, bimodal south/north zones)",
+      "region_scope": [],
+      "start_date": "2026-03-01",
+      "end_date": "2026-09-30",
+      "sowing_start": "2026-03-01",
+      "sowing_end": "2026-05-31"
+    },
+    {
+      "season_id": "TZA-2026-vuli-maize",
+      "country_id": "TZA",
+      "crop_id": "maize",
+      "name": "Vuli 2026 (short rains, bimodal zones only)",
+      "region_scope": [],
+      "start_date": "2026-10-01",
+      "end_date": "2027-02-28",
+      "sowing_start": "2026-10-01",
+      "sowing_end": "2026-12-15"
+    },
+    {
+      "season_id": "ETH-2026-meher-maize",
+      "country_id": "ETH",
+      "crop_id": "maize",
+      "name": "Meher 2026 (main season)",
+      "region_scope": [],
+      "start_date": "2026-06-01",
+      "end_date": "2026-12-31",
+      "sowing_start": "2026-06-01",
+      "sowing_end": "2026-07-31"
+    },
+    {
+      "season_id": "ETH-2026-belg-maize",
+      "country_id": "ETH",
+      "crop_id": "maize",
+      "name": "Belg 2026 (short/spring rains, southern & eastern zones)",
+      "region_scope": [],
+      "start_date": "2026-02-01",
+      "end_date": "2026-06-30",
+      "sowing_start": "2026-02-01",
+      "sowing_end": "2026-04-15"
+    },
+    {
+      "season_id": "ZAF-2026-summer-maize",
+      "country_id": "ZAF",
+      "crop_id": "maize",
+      "name": "2026 Summer Season",
+      "region_scope": [],
+      "start_date": "2026-10-01",
+      "end_date": "2027-05-31",
+      "sowing_start": "2026-10-15",
+      "sowing_end": "2026-12-15"
+    }
+  ]
+}

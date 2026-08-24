@@ -1,0 +1,39 @@
+{
+  "_purpose": "Canonical, deduplicated 32-card stack from Card_Architecture_Final_Review_and_Gaps.md \u00a74. The frontend renders purely from this manifest -- tiering/ordering is data, not frontend code.",
+  "cards": [
+    {"card_id": "agri_situation", "theme": "cross_theme", "tier": 1, "title": "Agricultural Situation", "snapshot_path": "situation", "requires": ["situation"], "visualization": "number"},
+    {"card_id": "crops_grown_here", "theme": "cross_theme", "tier": 1, "title": "Crops Grown Here", "snapshot_path": "crops_grown_here", "requires": ["crops_grown_here"], "visualization": "table"},
+    {"card_id": "sowing_progress", "theme": "sowing", "tier": 1, "title": "Sowing Progress", "snapshot_path": "sowing", "requires": ["sowing.progress_pct", "sowing.target_area_ha"], "visualization": "number"},
+    {"card_id": "sowing_trend", "theme": "sowing", "tier": 1, "title": "Sowing Trend", "snapshot_path": "sowing.weekly_rate_pp", "requires": ["sowing.weekly_rate_pp"], "visualization": "number"},
+    {"card_id": "yield_current", "theme": "yield", "tier": 1, "title": "Current Yield Estimate", "snapshot_path": "yield_performance.estimated_yield_kg_ha", "requires": ["yield_performance.estimated_yield_kg_ha"], "visualization": "number"},
+    {"card_id": "yield_gap", "theme": "yield", "tier": 1, "title": "Yield Gap vs Attainable", "snapshot_path": "yield_performance", "requires": ["yield_performance.yield_gap_kg_ha", "yield_performance.counterfactual_tier"], "visualization": "number"},
+    {"card_id": "production_economic", "theme": "yield", "tier": 1, "title": "Production Gap + Economic Exposure", "snapshot_path": "yield_performance", "requires": ["yield_performance.production_gap_mt"], "visualization": "number"},
+    {"card_id": "confidence", "theme": "cross_theme", "tier": 1, "title": "Confidence", "snapshot_path": "sowing.confidence", "requires": [], "visualization": "number"},
+    {"card_id": "freshness", "theme": "cross_theme", "tier": 1, "title": "Freshness", "snapshot_path": "sowing.freshness", "requires": [], "visualization": "number"},
+
+    {"card_id": "sowing_historical_curve", "theme": "sowing", "tier": 2, "title": "Historical Progress Curve", "snapshot_path": "sowing", "requires": [], "visualization": "line_envelope"},
+    {"card_id": "sowing_phenology", "theme": "sowing", "tier": 2, "title": "Phenology Timing", "snapshot_path": "sowing", "requires": [], "visualization": "number"},
+    {"card_id": "sowing_stage_distribution", "theme": "sowing", "tier": 2, "title": "Crop Stage Distribution", "snapshot_path": "sowing.stage_distribution", "requires": ["sowing.stage_distribution"], "visualization": "stacked_bar"},
+    {"card_id": "sowing_catchup", "theme": "sowing", "tier": 2, "title": "Catch-Up Potential", "snapshot_path": "sowing", "requires": [], "visualization": "number"},
+    {"card_id": "sowing_spatial_distribution", "theme": "sowing", "tier": 2, "title": "Spatial Distribution", "snapshot_path": "sowing", "requires": [], "visualization": "bar"},
+    {"card_id": "sowing_weather_context", "theme": "sowing", "tier": 2, "title": "Weather / Moisture Context", "snapshot_path": "sowing", "requires": [], "visualization": "table"},
+    {"card_id": "yield_historical_anomaly", "theme": "yield", "tier": 2, "title": "Historical Yield Anomaly", "snapshot_path": "yield_performance.seasonal_anomaly_kg_ha", "requires": ["yield_performance.seasonal_anomaly_kg_ha"], "visualization": "number"},
+    {"card_id": "yield_forecast_interval", "theme": "yield", "tier": 2, "title": "Forecast + Uncertainty Interval", "snapshot_path": "yield_performance.yield_interval", "requires": [], "visualization": "line_envelope"},
+    {"card_id": "yield_attainable_benchmark", "theme": "yield", "tier": 2, "title": "Attainable Benchmark", "snapshot_path": "yield_performance.attainable_yield_kg_ha", "requires": ["yield_performance.attainable_yield_kg_ha"], "visualization": "number"},
+    {"card_id": "yield_spatial_risk", "theme": "yield", "tier": 2, "title": "Spatial Risk Distribution", "snapshot_path": "yield_performance", "requires": [], "visualization": "bar"},
+    {"card_id": "yield_potential_contributors", "theme": "yield", "tier": 2, "title": "Potential Contributors", "snapshot_path": "yield_performance", "requires": [], "visualization": "matrix"},
+    {"card_id": "yield_gap_waterfall", "theme": "yield", "tier": 2, "title": "Seasonal vs Structural Gap", "snapshot_path": "yield_performance", "requires": ["yield_performance.attainable_yield_kg_ha", "yield_performance.historical_expected_yield_kg_ha", "yield_performance.estimated_yield_kg_ha"], "visualization": "waterfall"},
+    {"card_id": "what_changed", "theme": "cross_theme", "tier": 2, "title": "What Changed (14 days)", "snapshot_path": "sowing", "requires": [], "visualization": "table"},
+    {"card_id": "where_happening", "theme": "cross_theme", "tier": 2, "title": "Where Is It Happening", "snapshot_path": "sowing", "requires": [], "visualization": "table"},
+    {"card_id": "normal_vs_abnormal", "theme": "cross_theme", "tier": 2, "title": "Normal vs Abnormal", "snapshot_path": "sowing", "requires": [], "visualization": "table"},
+
+    {"card_id": "spatial_autocorrelation", "theme": "cross_theme", "tier": 3, "title": "Spatial Autocorrelation (Moran's I)", "snapshot_path": "sowing", "requires": [], "visualization": "number"},
+    {"card_id": "change_point_detection", "theme": "cross_theme", "tier": 3, "title": "Change Detection", "snapshot_path": "sowing", "requires": [], "visualization": "line_envelope"},
+    {"card_id": "economic_sensitivity", "theme": "yield", "tier": 3, "title": "Economic Sensitivity", "snapshot_path": "yield_performance.economic_exposure_range", "requires": [], "visualization": "table"},
+    {"card_id": "evidence_stack", "theme": "cross_theme", "tier": 3, "title": "Evidence Stack", "snapshot_path": "sowing.lineage.sources", "requires": ["sowing.lineage.sources"], "visualization": "matrix"},
+    {"card_id": "know_dont_know", "theme": "cross_theme", "tier": 3, "title": "What We Know / Don't Know", "snapshot_path": "sowing", "requires": [], "visualization": "table"},
+    {"card_id": "data_quality", "theme": "cross_theme", "tier": 3, "title": "Data Quality", "snapshot_path": "sowing.spatial_support", "requires": ["sowing.spatial_support"], "visualization": "table"},
+    {"card_id": "compare_mode", "theme": "cross_theme", "tier": 3, "title": "Compare Mode", "snapshot_path": "identity", "requires": [], "visualization": "table"},
+    {"card_id": "lineage_trace", "theme": "cross_theme", "tier": 3, "title": "Lineage / Trace Inspector", "snapshot_path": "sowing.lineage", "requires": ["sowing.lineage.computation_trace_id"], "visualization": "table"}
+  ]
+}

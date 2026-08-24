@@ -1,0 +1,155 @@
+{
+  "_purpose": "Resolves the mismatch between GADM map geometry (what is clickable) and the legacy/official names shown in existing login pickers, per Card_Architecture_Final_Review_and_Gaps.md \u00a72.1. A legacy_id is a DISPLAY-ONLY grouping layer, never a selectable analytical admin_id.",
+  "groups": [
+    {
+      "country_id": "KEN",
+      "legacy_id": "KEN-LEGACY-NAIROBI",
+      "legacy_name": "Nairobi",
+      "legacy_kind": "province (pre-2010, abolished)",
+      "maps_to_admin_ids": ["KEN-ADMIN1-NAIROBI"],
+      "note": "1:1 -- Nairobi province and Nairobi county are coextensive."
+    },
+    {
+      "country_id": "KEN",
+      "legacy_id": "KEN-LEGACY-CENTRAL",
+      "legacy_name": "Central",
+      "legacy_kind": "province (pre-2010, abolished)",
+      "maps_to_admin_ids": ["KEN-ADMIN1-KIAMBU", "KEN-ADMIN1-KIRINYAGA", "KEN-ADMIN1-MURANGA", "KEN-ADMIN1-NYANDARUA", "KEN-ADMIN1-NYERI"],
+      "note": "Approximate historical grouping; verify against 2010 constitutional county boundaries before shipping as authoritative."
+    },
+    {
+      "country_id": "KEN",
+      "legacy_id": "KEN-LEGACY-COAST",
+      "legacy_name": "Coast",
+      "legacy_kind": "province (pre-2010, abolished)",
+      "maps_to_admin_ids": ["KEN-ADMIN1-MOMBASA", "KEN-ADMIN1-KWALE", "KEN-ADMIN1-KILIFI", "KEN-ADMIN1-TANA-RIVER", "KEN-ADMIN1-LAMU", "KEN-ADMIN1-TAITA-TAVETA"],
+      "note": "Approximate historical grouping."
+    },
+    {
+      "country_id": "KEN",
+      "legacy_id": "KEN-LEGACY-EASTERN",
+      "legacy_name": "Eastern",
+      "legacy_kind": "province (pre-2010, abolished)",
+      "maps_to_admin_ids": ["KEN-ADMIN1-EMBU", "KEN-ADMIN1-ISIOLO", "KEN-ADMIN1-KITUI", "KEN-ADMIN1-MACHAKOS", "KEN-ADMIN1-MAKUENI", "KEN-ADMIN1-MARSABIT", "KEN-ADMIN1-MERU", "KEN-ADMIN1-THARAKA-NITHI"],
+      "note": "Approximate historical grouping."
+    },
+    {
+      "country_id": "KEN",
+      "legacy_id": "KEN-LEGACY-NYANZA",
+      "legacy_name": "Nyanza",
+      "legacy_kind": "province (pre-2010, abolished)",
+      "maps_to_admin_ids": ["KEN-ADMIN1-KISUMU", "KEN-ADMIN1-HOMA-BAY", "KEN-ADMIN1-KISII", "KEN-ADMIN1-MIGORI", "KEN-ADMIN1-NYAMIRA", "KEN-ADMIN1-SIAYA"],
+      "note": "Approximate historical grouping."
+    },
+    {
+      "country_id": "KEN",
+      "legacy_id": "KEN-LEGACY-RIFT-VALLEY",
+      "legacy_name": "Rift Valley",
+      "legacy_kind": "province (pre-2010, abolished)",
+      "maps_to_admin_ids": ["KEN-ADMIN1-BARINGO", "KEN-ADMIN1-BOMET", "KEN-ADMIN1-ELGEYO-MARAKWET", "KEN-ADMIN1-KAJIADO", "KEN-ADMIN1-KERICHO", "KEN-ADMIN1-LAIKIPIA", "KEN-ADMIN1-NAKURU", "KEN-ADMIN1-NANDI", "KEN-ADMIN1-NAROK", "KEN-ADMIN1-SAMBURU", "KEN-ADMIN1-TRANS-NZOIA", "KEN-ADMIN1-TURKANA", "KEN-ADMIN1-UASIN-GISHU", "KEN-ADMIN1-WEST-POKOT"],
+      "note": "Largest legacy province, spans 14 current counties -- approximate grouping."
+    },
+    {
+      "country_id": "KEN",
+      "legacy_id": "KEN-LEGACY-WESTERN",
+      "legacy_name": "Western",
+      "legacy_kind": "province (pre-2010, abolished)",
+      "maps_to_admin_ids": ["KEN-ADMIN1-BUNGOMA", "KEN-ADMIN1-BUSIA", "KEN-ADMIN1-KAKAMEGA", "KEN-ADMIN1-VIHIGA"],
+      "note": "Approximate historical grouping."
+    },
+    {
+      "country_id": "KEN",
+      "legacy_id": "KEN-LEGACY-NORTH-EASTERN",
+      "legacy_name": "North Eastern",
+      "legacy_kind": "province (pre-2010, abolished)",
+      "maps_to_admin_ids": ["KEN-ADMIN1-GARISSA", "KEN-ADMIN1-MANDERA", "KEN-ADMIN1-WAJIR"],
+      "note": "Approximate historical grouping."
+    },
+    {
+      "country_id": "UGA",
+      "legacy_id": "UGA-LEGACY-CENTRAL",
+      "legacy_name": "Central",
+      "legacy_kind": "region",
+      "maps_to_admin_ids": ["placeholder -- requires authoritative region-to-district crosswalk from Uganda Bureau of Statistics before production use"],
+      "note": "Region groups districts; UBOS publishes the authoritative mapping. Not yet verified against the 58-district GADM list in this repo."
+    },
+    {
+      "country_id": "UGA",
+      "legacy_id": "UGA-LEGACY-EASTERN",
+      "legacy_name": "Eastern",
+      "legacy_kind": "region",
+      "maps_to_admin_ids": ["placeholder -- requires UBOS crosswalk"],
+      "note": "See UGA-LEGACY-CENTRAL note."
+    },
+    {
+      "country_id": "UGA",
+      "legacy_id": "UGA-LEGACY-NORTHERN",
+      "legacy_name": "Northern",
+      "legacy_kind": "region",
+      "maps_to_admin_ids": ["placeholder -- requires UBOS crosswalk"],
+      "note": "See UGA-LEGACY-CENTRAL note."
+    },
+    {
+      "country_id": "UGA",
+      "legacy_id": "UGA-LEGACY-WESTERN",
+      "legacy_name": "Western",
+      "legacy_kind": "region",
+      "maps_to_admin_ids": ["placeholder -- requires UBOS crosswalk"],
+      "note": "See UGA-LEGACY-CENTRAL note."
+    },
+    {
+      "country_id": "TZA",
+      "legacy_id": "TZA-LEGACY-PEMBA-NORTH",
+      "legacy_name": "Pemba North",
+      "legacy_kind": "english alias of GADM Swahili region name",
+      "maps_to_admin_ids": ["TZA-ADMIN1-KASKAZINI-PEMBA"],
+      "note": "Naming/transliteration alias, not a boundary mismatch."
+    },
+    {
+      "country_id": "TZA",
+      "legacy_id": "TZA-LEGACY-PEMBA-SOUTH",
+      "legacy_name": "Pemba South",
+      "legacy_kind": "english alias of GADM Swahili region name",
+      "maps_to_admin_ids": ["TZA-ADMIN1-KUSINI-PEMBA"],
+      "note": "Naming/transliteration alias."
+    },
+    {
+      "country_id": "TZA",
+      "legacy_id": "TZA-LEGACY-ZANZIBAR-NORTH",
+      "legacy_name": "Zanzibar North",
+      "legacy_kind": "english alias of GADM Swahili region name",
+      "maps_to_admin_ids": ["TZA-ADMIN1-KASKAZINI-UNGUJA"],
+      "note": "Naming/transliteration alias."
+    },
+    {
+      "country_id": "TZA",
+      "legacy_id": "TZA-LEGACY-ZANZIBAR-CENTRAL-SOUTH",
+      "legacy_name": "Zanzibar Central/South",
+      "legacy_kind": "english alias of GADM Swahili region name",
+      "maps_to_admin_ids": ["TZA-ADMIN1-KUSINI-UNGUJA"],
+      "note": "Naming/transliteration alias."
+    },
+    {
+      "country_id": "TZA",
+      "legacy_id": "TZA-LEGACY-ZANZIBAR-WEST",
+      "legacy_name": "Zanzibar West",
+      "legacy_kind": "english alias of GADM Swahili region name",
+      "maps_to_admin_ids": ["TZA-ADMIN1-MJINI-MAGHARIBI"],
+      "note": "Naming/transliteration alias."
+    },
+    {
+      "country_id": "TZA",
+      "legacy_id": "TZA-MISSING-SONGWE",
+      "legacy_name": "Songwe",
+      "legacy_kind": "region missing from legacy login list",
+      "maps_to_admin_ids": ["TZA-ADMIN1-SONGWE"],
+      "note": "Songwe was carved out of Mbeya region in 2016. It exists on the GADM map but was absent from the old login dropdown -- add it as a first-class selectable region, do not silently fold it back into Mbeya."
+    }
+  ],
+  "ethiopia_boundary_staleness_flag": {
+    "issue": "GADM's 11-region Ethiopia dataset predates the 2020 split of Sidama from SNNPR and the 2021 formation of the South West Ethiopia Peoples' Region. The current login list already includes both newer regions, but the map geometry does not.",
+    "impact": "Any card computed for 'Sidama' or 'South West Ethiopia Peoples' cannot resolve to a real polygon under the current GADM source.",
+    "required_fix": "Replace Ethiopia admin-1 geometry with a current source (OCHA/HDX Common Operational Datasets for Ethiopia, or CSA/Ethiopian Statistics Service boundaries) before enabling Ethiopia in production. Not fixable by a crosswalk table alone -- new geometry is required.",
+    "status": "unresolved_blocker_for_ethiopia_v1"
+  }
+}

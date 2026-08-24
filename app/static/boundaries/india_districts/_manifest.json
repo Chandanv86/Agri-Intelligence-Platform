@@ -1,0 +1,142 @@
+{
+  "andaman-and-nicobar": {
+    "district_count": 2,
+    "size_kb": 10.4
+  },
+  "andhra-pradesh": {
+    "district_count": 23,
+    "size_kb": 79.2
+  },
+  "arunachal-pradesh": {
+    "district_count": 15,
+    "size_kb": 29.0
+  },
+  "assam": {
+    "district_count": 23,
+    "size_kb": 61.2
+  },
+  "bihar": {
+    "district_count": 37,
+    "size_kb": 87.6
+  },
+  "chandigarh": {
+    "district_count": 1,
+    "size_kb": 0.7
+  },
+  "chhattisgarh": {
+    "district_count": 16,
+    "size_kb": 51.5
+  },
+  "dadra-and-nagar-haveli": {
+    "district_count": 1,
+    "size_kb": 2.0
+  },
+  "daman-and-diu": {
+    "district_count": 2,
+    "size_kb": 1.4
+  },
+  "delhi": {
+    "district_count": 1,
+    "size_kb": 1.8
+  },
+  "goa": {
+    "district_count": 2,
+    "size_kb": 3.2
+  },
+  "gujarat": {
+    "district_count": 25,
+    "size_kb": 86.8
+  },
+  "haryana": {
+    "district_count": 19,
+    "size_kb": 32.7
+  },
+  "himachal-pradesh": {
+    "district_count": 12,
+    "size_kb": 25.1
+  },
+  "jammu-and-kashmir": {
+    "district_count": 14,
+    "size_kb": 24.8
+  },
+  "jharkhand": {
+    "district_count": 22,
+    "size_kb": 55.7
+  },
+  "karnataka": {
+    "district_count": 27,
+    "size_kb": 74.3
+  },
+  "kerala": {
+    "district_count": 14,
+    "size_kb": 22.7
+  },
+  "lakshadweep": {
+    "district_count": 1,
+    "size_kb": 0.3
+  },
+  "madhya-pradesh": {
+    "district_count": 48,
+    "size_kb": 143.8
+  },
+  "maharashtra": {
+    "district_count": 34,
+    "size_kb": 107.1
+  },
+  "manipur": {
+    "district_count": 9,
+    "size_kb": 16.0
+  },
+  "meghalaya": {
+    "district_count": 7,
+    "size_kb": 11.9
+  },
+  "mizoram": {
+    "district_count": 8,
+    "size_kb": 19.0
+  },
+  "nagaland": {
+    "district_count": 8,
+    "size_kb": 12.1
+  },
+  "odisha": {
+    "district_count": 30,
+    "size_kb": 98.8
+  },
+  "puducherry": {
+    "district_count": 4,
+    "size_kb": 3.7
+  },
+  "punjab": {
+    "district_count": 17,
+    "size_kb": 39.1
+  },
+  "rajasthan": {
+    "district_count": 32,
+    "size_kb": 97.4
+  },
+  "sikkim": {
+    "district_count": 4,
+    "size_kb": 5.5
+  },
+  "tamil-nadu": {
+    "district_count": 30,
+    "size_kb": 69.9
+  },
+  "tripura": {
+    "district_count": 4,
+    "size_kb": 6.8
+  },
+  "uttar-pradesh": {
+    "district_count": 70,
+    "size_kb": 170.1
+  },
+  "uttarakhand": {
+    "district_count": 13,
+    "size_kb": 29.9
+  },
+  "west-bengal": {
+    "district_count": 19,
+    "size_kb": 70.6
+  }
+}

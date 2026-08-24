@@ -1,0 +1,51 @@
+{
+  "identity": {
+    "country_id": "IND",
+    "admin_id": "IND-ADMIN2-PUNJAB-LUDHIANA",
+    "crop_id": "rice",
+    "season_id": "IND-2026-kharif-rice"
+  },
+  "sowing": {
+    "detected_established_area_ha": 148230,
+    "target_area_ha": 210500,
+    "expected_progress_pct": 74.0,
+    "weekly_history": [
+      {"date": "2026-07-20T00:00:00Z", "observed_pct": 48.0, "expected_pct": 52.0},
+      {"date": "2026-07-27T00:00:00Z", "observed_pct": 56.0, "expected_pct": 60.0},
+      {"date": "2026-08-03T00:00:00Z", "observed_pct": 63.0, "expected_pct": 66.0},
+      {"date": "2026-08-10T00:00:00Z", "observed_pct": 67.0, "expected_pct": 70.0},
+      {"date": "2026-08-17T00:00:00Z", "observed_pct": 70.4, "expected_pct": 74.0}
+    ],
+    "stage_established_pct": 70.4,
+    "stage_emerging_pct": 6.0,
+    "stage_uncertain_pct": 3.0,
+    "observation_date": "2026-08-18T00:00:00Z",
+    "processed_date": "2026-08-19T08:30:00+00:00",
+    "temporal_density": 0.88,
+    "sensor_agreement": 0.86,
+    "classifier_prob": 0.91,
+    "spatial_support": 0.93,
+    "historical_consistency": 0.84,
+    "model_uncertainty": 0.15,
+    "field_level_source_agreement": 0.90,
+    "total_pixels": 2100000,
+    "valid_pixels": 1953000,
+    "observation_gap_days": 1
+  },
+  "yield": {
+    "area_ha": 205000,
+    "estimated_yield_kg_ha": 3980,
+    "historical_expected_yield_kg_ha": 4150,
+    "attainable_yield_kg_ha": 4900,
+    "counterfactual_tier": "L2_comparable_system",
+    "price_value": 2183,
+    "price_unit": "INR_per_quintal",
+    "price_basis": "modal_mandi_ludhiana_demo",
+    "price_as_of": "2026-08-15"
+  },
+  "crops_grown_here": [
+    {"crop_id": "rice", "canonical_name": "Rice", "area_share_pct": 61.2, "source": "amed_demo", "data_status": "DEMO"},
+    {"crop_id": "wheat", "canonical_name": "Wheat", "area_share_pct": 34.5, "source": "amed_demo", "data_status": "DEMO"},
+    {"crop_id": "maize", "canonical_name": "Maize", "area_share_pct": 4.3, "source": "amed_demo", "data_status": "DEMO"}
+  ]
+}

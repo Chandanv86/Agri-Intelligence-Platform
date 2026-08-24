@@ -1,0 +1,51 @@
+{
+  "identity": {
+    "country_id": "IND",
+    "admin_id": "IND-ADMIN2-BIHAR-PATNA",
+    "crop_id": "rice",
+    "season_id": "IND-2026-kharif-rice"
+  },
+  "sowing": {
+    "detected_established_area_ha": 61200,
+    "target_area_ha": 118400,
+    "expected_progress_pct": 68.0,
+    "weekly_history": [
+      {"date": "2026-07-20T00:00:00Z", "observed_pct": 31.0, "expected_pct": 40.0},
+      {"date": "2026-07-27T00:00:00Z", "observed_pct": 38.0, "expected_pct": 48.0},
+      {"date": "2026-08-03T00:00:00Z", "observed_pct": 44.0, "expected_pct": 55.0},
+      {"date": "2026-08-10T00:00:00Z", "observed_pct": 48.5, "expected_pct": 61.0},
+      {"date": "2026-08-17T00:00:00Z", "observed_pct": 51.7, "expected_pct": 68.0}
+    ],
+    "stage_established_pct": 51.7,
+    "stage_emerging_pct": 11.0,
+    "stage_uncertain_pct": 7.0,
+    "observation_date": "2026-08-17T00:00:00Z",
+    "processed_date": "2026-08-19T08:30:00+00:00",
+    "temporal_density": 0.71,
+    "sensor_agreement": 0.74,
+    "classifier_prob": 0.80,
+    "spatial_support": 0.79,
+    "historical_consistency": 0.69,
+    "model_uncertainty": 0.28,
+    "field_level_source_agreement": 0.72,
+    "total_pixels": 1450000,
+    "valid_pixels": 1145500,
+    "observation_gap_days": 6
+  },
+  "yield": {
+    "area_ha": 115000,
+    "estimated_yield_kg_ha": 2510,
+    "historical_expected_yield_kg_ha": 2740,
+    "attainable_yield_kg_ha": 3900,
+    "counterfactual_tier": "L2_comparable_system",
+    "price_value": 2100,
+    "price_unit": "INR_per_quintal",
+    "price_basis": "modal_mandi_patna_demo",
+    "price_as_of": "2026-08-15"
+  },
+  "crops_grown_here": [
+    {"crop_id": "rice", "canonical_name": "Rice", "area_share_pct": 58.4, "source": "worldcereal_demo", "data_status": "DEMO"},
+    {"crop_id": "maize", "canonical_name": "Maize", "area_share_pct": 21.1, "source": "worldcereal_demo", "data_status": "DEMO"},
+    {"crop_id": "wheat", "canonical_name": "Wheat", "area_share_pct": 15.9, "source": "worldcereal_demo", "data_status": "DEMO"}
+  ]
+}

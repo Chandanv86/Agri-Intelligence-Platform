@@ -1,0 +1,24 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.8
+httpx>=0.27
+python-dotenv>=1.0
+pytest>=8.0
+pytest-asyncio>=0.24
+
+# --- Async task queue (see docs/PRODUCTION_IMPLEMENTATION_PLAN.md §2) ---
+celery[redis]>=5.4
+redis>=5.0
+flower>=2.0.1
+
+# --- Tier 1/2 datastore (see docs/PRODUCTION_IMPLEMENTATION_PLAN.md §7) ---
+sqlalchemy>=2.0
+psycopg[binary]>=3.2
+alembic>=1.13
+
+# NOTE: earthengine-api, sentinelhub credentials, and geopandas/shapely are
+# intentionally NOT listed here. Per docs/KNOWN_LIMITATIONS.md, this build
+# must stay fully runnable in DEMO mode with zero live-connector setup.
+# Install those separately (requirements-live.txt, added in Phase 1/2 of the
+# plan) only in environments that actually have GEE/Sentinel Hub credentials.
+

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agricultural Intelligence Platform</title>
+  <link rel="stylesheet" href="/static/vendor/maplibre-gl/maplibre-gl.css" />
+  <link rel="stylesheet" href="/static/app.css" />
+</head>
+<body>
+  <div id="intro" class="intro">
+    <div class="intro-card">
+      <div class="intro-eyebrow">Agricultural Intelligence Platform</div>
+      <h1>Sowing Progress &amp; Yield Gap, from a click on the globe.</h1>
+      <p>India · Kenya · Uganda · Tanzania · Ethiopia · South Africa</p>
+      <p class="intro-hint">Click a highlighted country, then keep drilling into the
+        boundaries that appear until you reach an area with a live analytical
+        snapshot. Everything else stays honestly labeled as not-yet-live.</p>
+      <button id="intro-enter">Enter the platform</button>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand" id="brand-breadcrumb">Agricultural Intelligence Platform</div>
+    <div class="badge-row">
+      <button id="reset-btn" class="ghost-btn" title="Back to globe">🌍 Reset</button>
+      <span class="badge badge-demo" id="data-status-badge">DEMO MODE</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <div id="map"></div>
+
+    <section class="panel" id="side-panel">
+      <div id="empty-state" class="empty-state">
+        Click a highlighted country on the globe to begin. Real boundary
+        polygons load as you drill down: country → state/province/region →
+        (India only) district. Areas without a live analytical snapshot yet
+        will say so plainly instead of showing invented numbers — see
+        <code>docs/KNOWN_LIMITATIONS.md</code>.
+      </div>
+      <div id="list-picker" class="list-picker" style="display:none;"></div>
+      <div id="cards-root"></div>
+    </section>
+  </main>
+
+  <script src="/static/vendor/maplibre-gl/maplibre-gl.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
